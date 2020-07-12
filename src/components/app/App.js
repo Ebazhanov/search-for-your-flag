@@ -35,10 +35,10 @@ export default function App() {
     }
 
     return (
-            <Search
-                filteredCountries={filteredCountries}
-                setSearch={setSearch}
-            />
+        <Search
+            filteredCountries={filteredCountries}
+            setSearch={setSearch}
+        />
     );
 }
 
