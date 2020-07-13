@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
-import axios from "axios";
 import './App.css'
 import Search from "../search-field/Search";
+import fetchCountriesDetails from "../../utils/RouteUtil";
+import filterCountriesByEnteredName from "../../utils/FilterCountries";
 
 export default function App() {
     const [countries, setCountries] = useState([]);
@@ -10,28 +11,14 @@ export default function App() {
     const [filteredCountries, setFilteredCountries] = useState([]);
 
     useEffect(() => {
-        setLoading(true);
-        axios
-            .get("https://restcountries.eu/rest/v2/all")
-            .then(result => {
-                setCountries(result.data);
-                setLoading(false);
-            })
-            .catch(err => {
-                console.log(err);
-            });
+        fetchCountriesDetails({setCountries, setLoading})
     }, []);
 
     useEffect(() => {
-        setFilteredCountries(
-            countries.filter(country =>
-                country.name.toLowerCase().includes(search.toLowerCase())
-            )
-        );
+        filterCountriesByEnteredName({setFilteredCountries, countries, search})
     }, [search, countries]);
 
     if (isLoading) {
-        console.log('rendered')
         return <p>Loading countries...</p>;
     }
 
