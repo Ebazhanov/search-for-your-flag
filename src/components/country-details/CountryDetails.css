@@ -1,14 +1,6 @@
-style {
-"width": "20px",
-"height": "20px"
-}
-
-p img {
-    size: auto;
-    border: solid 1px transparent;
+div img {
+    height: 70%;
+    width: 50%;
+    dotted: red;
     margin: 10px;
-}
-
-h1 {
-    size: 50cm;
 }

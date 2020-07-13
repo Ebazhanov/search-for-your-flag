@@ -31,6 +31,7 @@ export default function App() {
     }, [search, countries]);
 
     if (isLoading) {
+        console.log('rendered')
         return <p>Loading countries...</p>;
     }
 
