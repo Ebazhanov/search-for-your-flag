@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
 import './App.css'
-import Search from "../search-field/Search";
-import fetchCountriesDetails from "../../utils/RouteUtil";
-import filterCountriesByEnteredName from "../../utils/FilterCountries";
+import Search from "../searchField/Search";
+import fetchCountriesDetails from 'utils/RouteUtil';
+import filterCountries from 'utils/FilterCountries.js';
+import Spinner from "../spinner/Spinner";
 
 export default function App() {
     const [countries, setCountries] = useState([]);
@@ -15,17 +16,19 @@ export default function App() {
     }, []);
 
     useEffect(() => {
-        filterCountriesByEnteredName({setFilteredCountries, countries, search})
+        filterCountries({setFilteredCountries, countries, search})
     }, [search, countries]);
 
-    if (isLoading) {
+/*    if (isLoading) {
         return <p>Loading countries...</p>;
-    }
+    }*/
 
     return (
         <Search
             filteredCountries={filteredCountries}
             setSearch={setSearch}
+
+
         />
     );
 }

@@ -1,12 +1,11 @@
-import axios from "axios";
+import {API_KEY} from "../constants/data";
 
 export default function fetchCountriesDetails({setLoading, setCountries}) {
-    console.log(setLoading)
     setLoading(true);
-    axios
-        .get("https://restcountries.eu/rest/v2/all")
-        .then(result => {
-            setCountries(result.data);
+    fetch(API_KEY)
+        .then(response => response.json())
+        .then(data => {
+            setCountries(data);
             setLoading(false);
         })
         .catch(err => {

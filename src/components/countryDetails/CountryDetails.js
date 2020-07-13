@@ -1,7 +1,7 @@
 import React from "react";
 import './CountryDetails.css'
 
-const CountryDetail = ({name, flag}) => {
+export default function CountryDetails({name, flag}) {
     return (
         <div>
             <img src={flag} alt={name}/>
@@ -9,5 +9,3 @@ const CountryDetail = ({name, flag}) => {
         </div>
     );
 };
-
-export default CountryDetail;
