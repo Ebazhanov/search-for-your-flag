@@ -1,5 +1,5 @@
 import React from "react";
-import CountryDetail from "../countryDetails/CountryDetails";
+import CountryDetail from "../country-details/CountryDetails";
 import {NAMES} from "constants/data";
 
 export default function Search({filteredCountries, setSearch}) {

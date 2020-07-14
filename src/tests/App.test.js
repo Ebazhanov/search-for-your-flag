@@ -1,7 +1,7 @@
 import React from 'react';
 import { cleanup, render, waitFor, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect'
-import Search from "../components/searchField/Search";
+import Search from "../components/search-field/Search";
 
 afterEach(cleanup)
 

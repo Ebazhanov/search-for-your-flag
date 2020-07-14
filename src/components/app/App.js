@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import './App.css'
-import Search from "../searchField/Search";
+import Search from "../search-field/Search";
 import fetchCountriesDetails from 'utils/RouteUtil';
 import filterCountries from 'utils/FilterCountries.js';
 import Spinner from "../spinner/Spinner";
