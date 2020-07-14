@@ -19,17 +19,14 @@ export default function App() {
         filterCountries({setFilteredCountries, countries, search})
     }, [search, countries]);
 
-/*    if (isLoading) {
-        return <p>Loading countries...</p>;
-    }*/
-
     return (
-        <Search
-            filteredCountries={filteredCountries}
-            setSearch={setSearch}
-
-
-        />
+        <>
+            <Spinner isLoading={isLoading}/>
+            <Search
+                filteredCountries={filteredCountries}
+                setSearch={setSearch}
+            />
+        </>
     );
 }
 
