@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import './App.css'
-import Search from "../search-field/Search";
+import Search from "../components/search-field/Search";
 import fetchCountriesDetails from 'utils/RouteUtil';
-import filterCountries from 'utils/FilterCountries.js';
-import Spinner from "../spinner/Spinner";
+import filterCountries from '../utils/FilterCountries.js';
+import Spinner from "../components/spinner/Spinner";
 
 export default function App() {
     const [countries, setCountries] = useState([]);
