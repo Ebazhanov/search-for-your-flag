@@ -12,8 +12,11 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
+    "test": "react-scripts test",
+    "build": "react-scripts build",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^4.11.0"
   }
 }

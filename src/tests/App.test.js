@@ -1,13 +1,31 @@
 import React from 'react';
-import { cleanup, render, waitFor, screen } from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect'
-import Search from "../components/search-field/Search";
+import App from "../app/App";
 
-afterEach(cleanup)
+/**
+ * Which query should I use?
+ * https://testing-library.com/docs/guide-which-query
+ * */
 
-test('renders App', async () => {
-    const { getByTestId} = render(<Search />);
-    await waitFor(() => screen.getByRole('heading'))
-    const inputFiled = getByTestId('search-field');
-    expect(inputFiled).toBeInTheDocument();
+describe('renders App component', () => {
+
+    //beforeAll(() => render(<App/>))
+
+    test('presence of static text on the page', () => {
+        render(<App/>)
+        expect(screen.getByText('Loading countries...')).toBeVisible();
+        expect(screen.getByText('Countries Search List')).toBeVisible();
+    });
+
+    test('check visibility of the input->search field', () => {
+        render(<App/>)
+        expect(screen.getByRole('textbox')).toBeVisible();
+    });
+
+    test('check presence of placeholder text', () => {
+        render(<App/>)
+        expect(screen.getByPlaceholderText('Search Country'));
+    });
+
 });
