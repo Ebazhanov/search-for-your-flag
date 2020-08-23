@@ -4,4 +4,5 @@
 - [x] write Unit tests based on (RTL) React Testing Library 
 - [x] write E2E test with Cypress
 - [x] CI integration with github Action 
-- [ ] add pagination
+- [ ] autocomplete search text field 
+- [ ] pagination
