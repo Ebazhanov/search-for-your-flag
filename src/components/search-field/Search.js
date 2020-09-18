@@ -14,7 +14,7 @@ export default function Search({filteredCountries, setSearch}) {
             <input
                 type="text"
                 placeholder={NAMES.placeHolder}
-                data-testid="searchField"
+                data-cy="searchField"
                 onChange={handleInputChange}
             />
             {filteredCountries.map((countryData, index) => (
