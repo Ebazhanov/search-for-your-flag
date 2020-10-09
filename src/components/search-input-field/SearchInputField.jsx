@@ -1,8 +1,8 @@
 import React from "react";
-import CountryDetail from "../country-details/CountryDetails";
 import {NAMES} from "constants/data";
+import SearchResult from "../search-result/SearchResult";
 
-export default function Search({filteredCountries, setSearch}) {
+export default function SearchInputField({filteredCountries, setSearch}) {
 
     const handleInputChange = (event) => {
         setSearch(event.target.value);
@@ -17,9 +17,9 @@ export default function Search({filteredCountries, setSearch}) {
                 data-cy="searchField"
                 onChange={handleInputChange}
             />
-            {filteredCountries.map((countryData, index) => (
-                <CountryDetail key={index} {...countryData} />
-            ))}
+            <SearchResult
+                filteredCountries={filteredCountries}
+            />
         </div>
     );
 }
