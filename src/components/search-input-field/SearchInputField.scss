@@ -1,0 +1,35 @@
+.field {
+  font-size: 75px;
+  display: inline-block;
+  border-bottom: 1.5px solid orange;
+  align-items: center;
+  justify-content: center;
+  padding-top: 250px;
+
+  > div {
+    margin-left: 25px;
+    > svg {
+      fill: grey;
+      transition: fill 0.2s ease-in-out;
+    }
+
+    &:focus-within {
+      > svg {
+        fill: darkblue;
+      }
+
+      > input {
+        color: darkblue;
+      }
+    }
+
+    > input {
+      margin-left: 22px;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      color: #424242;
+      transition: color 0.2s ease-in-out;
+    }
+  }
+}

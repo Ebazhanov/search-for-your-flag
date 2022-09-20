@@ -1,6 +1,6 @@
-div img {
-    height: 70%;
-    width: 50%;
-    dotted: red;
-    margin: 10px;
+div > img {
+  height: 70%;
+  width: 50%;
+  dotted: red;
+  margin: 10px;
 }

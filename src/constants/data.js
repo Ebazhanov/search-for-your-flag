@@ -1,5 +1,4 @@
-export const API_KEY = 'https://restcountries.eu/rest/v2/all';
+export const API_KEY = "https://restcountries.com/v2/all";
 export const NAMES = {
-    title: 'Countries Search List',
-    placeHolder: 'Search Country'
-}
+  placeHolder: "Enter country name",
+};
