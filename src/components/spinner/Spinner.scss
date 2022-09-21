@@ -1,0 +1,18 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+.spinner {
+  padding-top: 50px;
+  text-align: center;
+  color: black;
+  @include for-phone-only {
+    font-size: 25px;
+  }
+
+  h1 {
+    justify-content: center;
+  }
+}

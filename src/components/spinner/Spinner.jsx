@@ -1,6 +1,16 @@
 import React from "react";
-import "./Spinner.css";
+import "./Spinner.scss";
+import { List } from "react-content-loader";
 
 export default function Spinner({ isLoading }) {
-  return isLoading && <p className="spinner">Loading countries...</p>;
+  return (
+    isLoading && (
+      <div className="spinner">
+        <h1>Loading ...</h1>
+        <div>
+          <List />
+        </div>
+      </div>
+    )
+  );
 }

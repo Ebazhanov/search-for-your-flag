@@ -22,7 +22,6 @@ export default function App() {
 
   return (
     <div className="app">
-      <Spinner isLoading={isLoading} />
       <div>
         <div>
           <SearchInputField
@@ -30,6 +29,7 @@ export default function App() {
             setSearch={setSearch}
           />
         </div>
+        <Spinner isLoading={isLoading} />
         <SearchResult filteredCountries={filteredCountries} />
       </div>
     </div>

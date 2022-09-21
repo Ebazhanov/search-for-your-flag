@@ -1,5 +1,35 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
 .field {
   font-size: 75px;
+  @include for-phone-only {
+    font-size: 25px;
+  }
+
+  @include for-tablet-portrait-up {
+    font-size: 45px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 45px;
+  }
+
   display: inline-block;
   border-bottom: 1.5px solid orange;
   align-items: center;

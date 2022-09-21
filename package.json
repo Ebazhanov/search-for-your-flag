@@ -36,7 +36,9 @@
   },
   "devDependencies": {
     "cypress": "^4.11.0",
+    "eslint": "^8.23.1",
     "prettier": "^2.7.1",
+    "react-content-loader": "^6.2.0",
     "react-icons": "^4.4.0",
     "start-server-and-test": "^1.11.2"
   }

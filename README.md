@@ -1,3 +1,7 @@
+# Search for any flags from all over the world
+
+> using public API_KEY = "https://restcountries.com/v2/all";
+
 ### TO BE done
 - [x] [demo](https://search-flag.netlify.app/)
 - [x] add better abstraction

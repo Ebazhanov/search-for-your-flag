@@ -1,0 +1,20 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+div {
+  .country-details h1 {
+    @include for-phone-only {
+      font-size: 30px;
+    }
+  }
+
+  > img {
+    height: 70%;
+    width: 50%;
+    dotted: red;
+    margin: 10px;
+  }
+}
