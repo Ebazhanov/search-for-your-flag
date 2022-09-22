@@ -12,4 +12,4 @@
 - [ ] pagination
 
 
-[gif](flags.gif)
+![gif](flags.gif)
