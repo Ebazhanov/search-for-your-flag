@@ -39,6 +39,10 @@
   > div {
     margin-left: 25px;
     > svg {
+      @include for-phone-only {
+        position: absolute;
+        margin-left: 2px;
+      }
       fill: grey;
       transition: fill 0.2s ease-in-out;
     }
@@ -55,6 +59,9 @@
 
     > input {
       margin-left: 22px;
+      @include for-phone-only {
+        margin-left: 52px;
+      }
       outline: none;
       background-color: transparent;
       border: none;
