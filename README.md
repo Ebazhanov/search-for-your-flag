@@ -10,3 +10,6 @@
 - [x] CI integration with github Action 
 - [ ] autocomplete search text field 
 - [ ] pagination
+
+
+[gif](flags.gif)
